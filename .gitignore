@@ -1,0 +1,17 @@
+.venv/
+__pycache__/
+cache/
+.ipynb_checkpoints/
+*.pyc
+*.pyo
+*.pyd
+.vscode/
+.idea/
+.env
+.env.*
+
+outputs/**/checkpoint-*/
+outputs/**/optimizer.pt
+outputs/**/scheduler.pt
+outputs/**/scaler.pt
+outputs/**/rng_state.pth

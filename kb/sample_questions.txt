@@ -1,0 +1,6 @@
+- AI là gì?
+- BM25 dùng để làm gì?
+- Hybrid retrieval là gì?
+- Extractive QA khác generative QA ở điểm nào?
+- PhoBERT là gì?
+- Tokenization tiếng Việt quan trọng vì sao?

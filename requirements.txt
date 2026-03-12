@@ -1,0 +1,15 @@
+accelerate>=0.34.0
+datasets>=2.19.0
+evaluate>=0.4.2
+fastapi>=0.115.0
+numpy>=1.24.0
+pypdf>=5.1.0
+python-docx>=1.1.2
+pyvi>=0.1.1
+rank-bm25>=0.2.2
+requests>=2.32.0
+safetensors>=0.4.5
+sentence-transformers>=3.0.1
+torch>=2.2.0
+transformers>=4.45.0
+uvicorn>=0.30.0

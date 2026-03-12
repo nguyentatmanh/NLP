@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumina</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <div class="backdrop">
+    <div class="orb orb-a"></div>
+    <div class="orb orb-b"></div>
+    <div class="orb orb-c"></div>
+    <div class="grid"></div>
+  </div>
+
+  <div class="app-shell">
+    <aside class="sidebar glass">
+      <div class="brand-block">
+        <div class="brand-mark">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div>
+          <h1 id="brandName">Lumina</h1>
+          <p id="brandTagline">Kho tri thức nội bộ</p>
+        </div>
+      </div>
+
+      <div class="panel-section">
+        <div class="panel-label">Chế độ</div>
+        <div class="segmented" id="modeSwitch">
+          <button class="mode-btn active" data-mode="open_domain">Tra cứu kho dữ liệu</button>
+          <button class="mode-btn" data-mode="context">Theo đoạn văn</button>
+        </div>
+      </div>
+
+      <div class="panel-section" id="retrievalControls">
+        <div class="field-row">
+          <label for="topKRetrieve">Top-k truy hồi</label>
+          <input id="topKRetrieve" type="number" min="1" max="12" value="6" />
+        </div>
+        <div class="field-row">
+          <label for="topKReader">Top-k reader</label>
+          <input id="topKReader" type="number" min="1" max="8" value="4" />
+        </div>
+      </div>
+
+      <div class="panel-section hidden" id="contextPanel">
+        <div class="panel-label">Ngữ cảnh</div>
+        <textarea id="contextInput" placeholder="Dán đoạn văn hoặc tài liệu ngắn vào đây..."></textarea>
+      </div>
+
+      <div class="panel-section stats-stack">
+        <div class="mini-card">
+          <span class="mini-title">Bộ truy hồi</span>
+          <strong id="retrieverBadge">-</strong>
+        </div>
+        <div class="mini-card">
+          <span class="mini-title">Reader</span>
+          <strong id="readerBadge">-</strong>
+        </div>
+        <div class="mini-card">
+          <span class="mini-title">Fallback</span>
+          <strong id="fallbackBadge">-</strong>
+        </div>
+      </div>
+
+      <div class="panel-section subtle-block">
+        <button class="secondary-btn" id="reindexBtn">Nạp lại kho dữ liệu</button>
+      </div>
+    </aside>
+
+    <main class="workspace glass">
+      <header class="topbar">
+        <div>
+          <div class="eyebrow">Hội thoại</div>
+          <div class="topbar-title">Cửa sổ làm việc</div>
+        </div>
+        <div class="status-cluster">
+          <span class="status-pill online" id="serverStatus">Sẵn sàng</span>
+        </div>
+      </header>
+
+      <section class="chat-scroll" id="chatScroll">
+        <div class="intro-card fade-up">
+          <div class="intro-chip">Sẵn sàng xử lý</div>
+          <h2>Hỏi trực tiếp để tra cứu kho dữ liệu hoặc dán ngữ cảnh để hỏi theo đoạn văn.</h2>
+          <p>Kết quả sẽ hiển thị kèm nguồn tham chiếu và trạng thái xử lý.</p>
+        </div>
+      </section>
+
+      <footer class="composer-wrap">
+        <div class="composer glass-inner">
+          <textarea id="messageInput" placeholder="Nhập câu hỏi của bạn..." rows="1"></textarea>
+          <button id="sendBtn" class="send-btn">
+            <span>Gửi</span>
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+              <path d="M5 12H19" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              <path d="M13 6L19 12L13 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+        </div>
+      </footer>
+    </main>
+  </div>
+
+  <template id="messageTemplate">
+    <article class="message-row fade-up">
+      <div class="avatar"></div>
+      <div class="message-card">
+        <div class="message-meta">
+          <span class="message-role"></span>
+          <span class="message-badge"></span>
+        </div>
+        <div class="message-body"></div>
+        <div class="source-list"></div>
+      </div>
+    </article>
+  </template>
+
+  <template id="typingTemplate">
+    <article class="message-row assistant fade-up" id="typingIndicator">
+      <div class="avatar"></div>
+      <div class="message-card typing-card">
+        <div class="typing-dots"><span></span><span></span><span></span></div>
+      </div>
+    </article>
+  </template>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

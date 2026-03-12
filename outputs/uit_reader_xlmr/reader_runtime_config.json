@@ -1,0 +1,8 @@
+{
+  "model_name": "xlm-roberta-base",
+  "dataset_name": "taidng/UIT-ViQuAD2.0",
+  "max_length": 256,
+  "doc_stride": 96,
+  "max_answer_length": 50,
+  "null_score_diff_threshold": 0.0
+}

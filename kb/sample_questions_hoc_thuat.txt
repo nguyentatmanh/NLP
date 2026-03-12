@@ -1,0 +1,30 @@
+Câu hỏi định nghĩa:
+- Xử lý ngôn ngữ tự nhiên là gì?
+- BM25 là gì?
+- Fine-tuning là gì?
+- API là gì?
+- No-answer là gì?
+
+Câu hỏi nêu đặc điểm:
+- NLP có đặc điểm gì?
+- UIT-ViQuAD2.0 có đặc điểm gì?
+- Deep Learning có đặc điểm gì nổi bật?
+- Hybrid retrieval có đặc điểm gì?
+
+Câu hỏi về vai trò:
+- Vai trò của NLP trong AI là gì?
+- Vai trò của API trong hệ hỏi đáp là gì?
+- Vai trò của tiền xử lý dữ liệu là gì?
+- Vai trò của chỉ số EM và F1 là gì?
+
+Câu hỏi về ý nghĩa:
+- Ý nghĩa của cơ chế no-answer là gì?
+- Ý nghĩa của việc đánh giá mô hình QA là gì?
+- Ý nghĩa của fine-tuning là gì?
+
+Câu hỏi so sánh:
+- So sánh Machine Learning và Deep Learning.
+- So sánh BERT, PhoBERT và XLM-R.
+- So sánh BM25 và dense retrieval.
+- So sánh extractive QA và generative QA.
+- So sánh Retriever-Reader và RAG.
